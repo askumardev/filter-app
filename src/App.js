@@ -6,7 +6,7 @@ class App extends Component {
   constructor() {
     super();
 
-    this.state = { string: "My name is Satish" };
+    this.state = { string: "Hello Satish" };
   }
 
   render() {
@@ -16,7 +16,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <p>{this.state.string}</p>
           <button
-            onClick={() => this.setState({ string: "My name is Satish Kumar" })}
+            onClick={() => this.setState({ string: "Hello Satish Kumar" })}
           >
             Change text
           </button>
