@@ -1,6 +1,5 @@
 // import React, { Component } from "react";
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 
 class App extends React.Component {
@@ -8,21 +7,14 @@ class App extends React.Component {
     super();
 
     this.state = {
-      monsters: [
-        {
-          name: "Frank",
-          id: "1",
-        },
-        {
-          name: "Hulk",
-          id: "2",
-        },
-        {
-          name: "Vampire",
-          id: "3",
-        },
-      ],
+      monsters: [],
     };
+  }
+
+  componentDidMount() {
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then((response) => response.json())
+      .then((users) => this.setState({ monsters: users }));
   }
 
   render() {
@@ -35,9 +27,10 @@ class App extends React.Component {
     );
   }
 }
-// Warning: Each child in a list should have a unique error
 
 export default App;
+
+// Warning: Each child in a list should have a unique error by adding key
 
 // function App() {
 //   return (
