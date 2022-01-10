@@ -6,25 +6,35 @@ class App extends Component {
   constructor() {
     super();
 
-    this.state = { string: "Hello Satish" };
+    this.state = {
+      monsters: [
+        {
+          name: "Frank",
+          id: "1",
+        },
+        {
+          name: "Hulk",
+          id: "2",
+        },
+        {
+          name: "Vampire",
+          id: "3",
+        },
+      ],
+    };
   }
 
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>{this.state.string}</p>
-          <button
-            onClick={() => this.setState({ string: "Hello Satish Kumar" })}
-          >
-            Change text
-          </button>
-        </header>
+        {this.state.monsters.map((monster) => (
+          <h3 key={monster.id}>{monster.name}</h3>
+        ))}
       </div>
     );
   }
 }
+// Warning: Each child in a list should have a unique error
 
 export default App;
 
