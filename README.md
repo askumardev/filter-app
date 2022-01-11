@@ -1,10 +1,15 @@
 # Getting Started with Create React App
 
+`npx create-react-app@5.0.0 filterApp`
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
+`yarn list react react-dom react-scripts`
+
 In the project directory, you can run:
+`yarn start`
 
 ### `npm start`
 
@@ -68,4 +73,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
 # filter-app
